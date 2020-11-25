@@ -19,6 +19,12 @@ class CartAdmin extends Database{
             $result->execute();
             return $result->fetch();
         }
+        public function edit($madon, $trangthai){
+            $sql="UPDATE dondathen SET trangthai='".$trangthai."' where madon='".$madon."'" ;
+            $request=$this->getConnection()->prepare($sql);
+            return $request->execute();
+            
+        }
         public function delete($madon)
         {
             $sql="DELETE * FROM dondathen WHERE madon ='".$madon."'";

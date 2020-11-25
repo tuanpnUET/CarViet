@@ -58,7 +58,7 @@
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ContactAdmin/index/ALL/1";?>">Hỏi Đáp</a>
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ListProduct/index/ALL/1";?>">Loại Xe</a>
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ListNew/index/ALL/1";?>">Loại Tin Tức</a>
-				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/CartAdmin/index/ALL/1"?>">Đơn hàng</a>
+				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/CartAdmin/index/ALL/1"?>">Đơn hẹn</a>
 
 				    </div>
 				

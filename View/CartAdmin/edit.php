@@ -8,10 +8,6 @@
     <input type="text" class="form-control" name="hoten" value="<?php echo $CartAdmin['hoten']; ?>">
   </div>
   <div class="form-group">
-    <label for="hoten">Người Đặt Hẹn:</label>
-    <input type="text" class="form-control" name="hoten" value="<?php echo $CartAdmin['hoten']; ?>">
-  </div>
-  <div class="form-group">
     <label for="ngayhen">Ngày Hẹn:</label>
     <input type="text" class="form-control" name="ngayhen" value="<?php echo $CartAdmin['ngayhen']; ?>">
   </div>

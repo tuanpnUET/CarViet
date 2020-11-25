@@ -18,8 +18,8 @@ class CartAdminController extends Controller
 
         if (isset($_POST["madon"]))
         {
-             $categories = new Category();
-            if ($categories->edit($_POST['madon']))
+             $CartAdmin = new CartAdmin();
+            if ($CartAdmin->edit($_POST['madon'],$_POST['trangthai']))
             {
                header("Location: " . WEBROOT."index.php/CartAdmin/index/ALL/1" );
             }
