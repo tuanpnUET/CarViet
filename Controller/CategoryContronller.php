@@ -15,13 +15,13 @@ class CategoryController extends Controller
 
     function add()
     {
-        if (isset($_POST["maloai"]))
+        if (isset($_POST["maloaixe"]))
         {
             require(ROOT . 'Model/Category.php');
 
              $Categories = new Category();
 
-            if ($Categories->add($_POST["maloai"],$_POST["tenloai"]))
+            if ($Categories->add($_POST["maloaixe"],$_POST["tenloaixe"]))
             {
                 header("Location: " . WEBROOT . "index.php/Category/index");
             }
@@ -37,10 +37,10 @@ class CategoryController extends Controller
 
         $d["Category"] = $Category->getByID($id);
 
-        if (isset($_POST["maloai"]))
+        if (isset($_POST["maloaixe"]))
         {
              $categories = new Category();
-            if ($categories->edit($_POST['maloai'],$_POST['tenloai']))
+            if ($categories->edit($_POST['maloaixe'],$_POST['tenloaixe']))
             {
                header("Location: " . WEBROOT."index.php/category/index" );
             }
@@ -49,12 +49,12 @@ class CategoryController extends Controller
         $this->render("edit");
     }
 
-    function delete($maloai)
+    function delete($maloaixe)
     {
         require(ROOT . 'Model /Category.php');
 
         $Categories = new Category();
-        if ($Categories->delete($maloai))
+        if ($Categories->delete($maloaixe))
         {
             header("Location: " . WEBROOT . "index.php/Category/index");
         }

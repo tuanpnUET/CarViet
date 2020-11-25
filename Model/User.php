@@ -11,7 +11,7 @@ class User extends Database{
 		}
 		public function getAll(){
 			
-			$sql = "SELECT id, taikhoan, matkhau, quyen FROM tblnguoidung";
+			$sql = "SELECT id, taikhoan, matkhau, quyen FROM nguoidung";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetchAll();
@@ -20,16 +20,16 @@ class User extends Database{
 
 		public function login($taikhoan,$matkhau)
 		{
-			$sql = "SELECT ID, taikhoan, matkhau, quyen FROM tblnguoidung";
+			$sql = "SELECT id, taikhoan, matkhau, quyen FROM nguoidung";
 			$sql.=" WHERE taikhoan='".$taikhoan."' and matkhau='".$matkhau."'";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetch();
 		}
 		
-		public function getById($id){
+		public function getByid($id){
 			
-			$sql = "SELECT ID, taikhoan, matkhau, quyen FROM tblnguoidung where ID=".$id;
+			$sql = "SELECT id, taikhoan, matkhau, quyen FROM nguoidung where id=".$id;
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetch();
@@ -38,7 +38,7 @@ class User extends Database{
 		public function add($taikhoan, $matkhau)
 		{
 			
-			$sql = "INSERT INTO tblnguoidung(taikhoan, matkhau, quyen) VALUES ('".$taikhoan."','".$matkhau."',1)";
+			$sql = "INSERT INTO nguoidung(taikhoan, matkhau, quyen) VALUES ('".$taikhoan."','".$matkhau."',1)";
 			$request=$this->getConnection()->prepare($sql);
 			return $request->execute();
 			
@@ -46,26 +46,26 @@ class User extends Database{
 		public function reg($taikhoan, $matkhau)
 		{
 			
-			$sql = "INSERT INTO tblnguoidung(taikhoan, matkhau, quyen) VALUES ('".$taikhoan."','".$matkhau."',1)";
+			$sql = "INSERT INTO nguoidung(taikhoan, matkhau, quyen) VALUES ('".$taikhoan."','".$matkhau."',1)";
 			$request=$this->getConnection()->prepare($sql);
 			return $request->execute();
 			
 		}
 		public function edit($taikhoan,$matkhau,$id){
-			$sql="UPDATE tblnguoidung SET taikhoan='".$taikhoan."',matkhau='".$matkhau."' where id=".$id;
+			$sql="UPDATE nguoidung SET taikhoan='".$taikhoan."',matkhau='".$matkhau."' where id=".$id;
 			$request=$this->getConnection()->prepare($sql);
 			return $request->execute();
 			
 		}
 
 		public function doimatkhau($taikhoan,$matkhaumoi){
-			$sql="UPDATE tblnguoidung SET matkhau='".$matkhaumoi."' where taikhoan='".$taikhoan."'";
+			$sql="UPDATE nguoidung SET matkhau='".$matkhaumoi."' where taikhoan='".$taikhoan."'";
 			
 			$request=$this->getConnection()->prepare($sql);
 			return $request->execute();
 		}
 		public function delete($id){
-			$sql="DELETE FROM tblnguoidung where id=".$id;
+			$sql="DELETE FROM nguoidung where id=".$id;
 			$request=$this->getConnection()->prepare($sql);
 			return $request->execute();
 
@@ -73,7 +73,7 @@ class User extends Database{
 		}
 		public function find(string $taikhoan){
 			$userList = array();
-			$sql = "SELECT id, taikhoan, matkhau, quyen, hoatdong FROM tblnguoidung where taikhoan='".$taikhoan."'";
+			$sql = "SELECT id, taikhoan, matkhau, quyen, hoatdong FROM nguoidung where taikhoan='".$taikhoan."'";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {

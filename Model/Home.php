@@ -2,7 +2,7 @@
 require_once (ROOT."/Helper/Database.php");
 class trangchu extends Database{
 	public function newsp(){
-		$sql = "SELECT masanpham,tensanpham,gia,anh,maloai FROM sanpham
+		$sql = "SELECT maxe,tendongxe,gia,anh,maloaixe FROM xe
 				ORDER BY ngaydang
 				LIMIT 6";
 		$result = $this->getConnection()->prepare($sql);

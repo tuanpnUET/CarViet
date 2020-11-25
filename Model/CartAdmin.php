@@ -88,7 +88,5 @@ class CartAdmin extends Database{
     }
     //$t=new Category();
 
-    //echo $t->add('L01','Nuoc uong','nuoc uong');
-        
         
   ?>

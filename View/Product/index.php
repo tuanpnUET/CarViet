@@ -1,11 +1,14 @@
 <div  id="right" class=" col-12 col-xs-12 col-lg-12">
 <div id="sanpham" class="col-12 col-xs-12 col-lg-12">
+    <h3>
+        Các mẫu xe hot:
+    </h3>
     <ul>
         <?php
         $tongsobanghi=count($products);
         $s_bghimoitrang=8;
         $start=0;
-        $maloai="ALL";
+        $maloaixe="ALL";
         $explode_url = explode('/', $_SERVER["REQUEST_URI"]);
         if(count($explode_url)>5)
             $start=($explode_url[count($explode_url)-1]-1)*$s_bghimoitrang;
@@ -16,10 +19,10 @@
             if($i%4==1) echo "<div class='row'>";
         
             echo "<li class='col-lg-3 col-6'>";
-            echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['masanpham']."/".$products[$j]['maloai']."'><img src='".WEBROOT."Image/".$products[$j]['anh']."' ></a>";
+            echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['maxe']."/".$products[$j]['maloaixe']."'><img src='".WEBROOT."image/".$products[$j]['anh']."' ></a>";
             
-            echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['masanpham']."/".$products[$j]['maloai']."'><h3>".$products[$j]['tensanpham']."</h3></a>";
-            echo "<p>".$products[$j]['gia']."</p>";
+            echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['maxe']."/".$products[$j]['maloaixe']."'><h3>".$products[$j]['tendongxe']."</h3></a>";
+            echo "<p>Giá: ".$products[$j]['gia']."VND</p>";
             echo "</li>";
             if($i%4==0) echo "</div>";
             $i++;
@@ -35,7 +38,7 @@
             {?>
                 <li style="float:left; list-style-type: none;"><a style="display:block; padding:10px; border:solid 1px orange; " href=
                 "<?php $str=WEBROOT."index.php/Product/index/";
-                       $str.=$maloai."/";
+                       $str.=$maloaixe."/";
                        $str.=$i;
                 echo $str; ?>"><?php echo $i;?></a></li>
             <?php

@@ -1,55 +1,78 @@
 <?php
-require_once (ROOT."/Helper/Database.php");
-//require_once ("../Helper/Database.php");
+require_once(ROOT.'Helper/Controller.php');
 class ProductAdmin extends Database {
-        // private static $ocon=null;
-        // public function_contruct()
-        // {
-        //  $ocon=$this->getConnection();
-        // }    
-        public function getAll($maloai){
-            
-            $sql = "SELECT * FROM sanpham";
-            if($maloai!="ALL")
-                $sql="SELECT * FROM sanpham where maloai='".$maloai."'";
-            $result = $this->getConnection()->prepare($sql);
-            $result->execute();
-            return $result->fetchAll();
-
-        }
-        public function getById($masanpham){
-            
-            $sql = "SELECT * FROM sanpham where masanpham='".$masanpham."'";
-            $result = $this->getConnection()->prepare($sql);
-            $result->execute();
-            return $result->fetch();
-
-        }
-        public function add($masanpham,$maloai,$tensanpham,$gia,$anh,$loaisanpham,$dangbaoche,$quycachsanpham,$hamluong,$thanhphan,$congdung,$doituong,$cachdung,$luuy,$baoquan,$hansudung){
-            $sql = "INSERT INTO sanpham(masanpham,maloai,tensanpham,gia,anh,loaisanpham,dangbaoche,quycachsanpham,hamluong,thanhphan,congdung,doituong,cachdung,luuy,baoquan,hansudung) VALUES ('".$masanpham."','".$maloai."','".$tensanpham."','".$gia."','".$anh."','".$loaisanpham."','".$dangbaoche."','".$quycachsanpham."','".$hamluong."','".$thanhphan."','".$congdung."','".$doituong."','".$cachdung."','".$luuy."','".$baoquan."','".$hansudung."')";
-          
-           
-         $request=Database::getConnection()->prepare($sql);
-            return $request->execute();
-            
-            
-        }
-        public function edit($masanpham,$tensanpham,$anh,$soluong,$loaisanpham,$dangbaoche,$quycachsanpham,$hamluong,$thanhphan,$congdung,$doituong,$cachdung,$luuy,$baoquan,$hansudung){
-            $sql="UPDATE sanpham SET tensanpham='".$tensanpham."',, anh='".$anh."',soluong=".$soluong.",loaisanpham=".$loaisanpham.",dangbaoche=".$dangbaoche.",quycachsanpham=".$quycachsanpham.",hamluong=".$hamluong.",thanhphan=".$thanhphan.",congdung=".$congdung.",doituong=".$doituong.",cachdung=".$cachdung.",luuy=".$luuy.",baoquan=".$baoquan.",hansudung=".$hansudung." where masanpham='".$masanpham."'" ;
-            $request=$this->getConnection()->prepare($sql);
-            return $request->execute();
-            
-        }
-        public function delete($masanpham){
-            $sql="DELETE FROM sanpham where masanpham='".$masanpham."'" ;
-            $request=$this->getConnection()->prepare($sql);
-            return $request->execute();
-        }
-
-
-
-
-        openssl_public_decrypt(data, decrypted, key)
-        
+    function index($maloaixe)
+    {
+        require(ROOT . 'Model/ProductAdmin.php');
+        $productsadmin = new ProductAdmin();
+        $this->data['productsadmin'] = $productsadmin->getAll($maloaixe);   
+        $this->set($this->data);
+        $this->render("index");
     }
-  ?>
+  
+    function add()
+    {
+        if (isset($_POST["maxe"]))
+        {
+            if(isset($_FILES['anh'])){
+            $file_name = $_FILES['anh']['name'];
+            $file_tmp =$_FILES['anh']['tmp_name'];
+             move_uploaded_file($file_tmp,ROOT."image/".$file_name);
+            }
+            require(ROOT . 'Model/ProductAdmin.php');
+            $productsadmin = new ProductAdmin();
+          
+
+            if ($productsadmin->add($_POST["maxe"],$_POST["maloaixe"], $_POST["tendongxe"],$_POST["gia"],$file_name,$_POST['anh'],$_POST["mota"]))
+            {
+                header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
+            }
+            else
+            {
+
+                header("Location:".WEBROOT."loi.php");
+            }
+        }
+        require_once(ROOT . 'Model/Category.php');
+        $categories = new Category();
+        $d['categories'] = $categories->getAll();
+        $this->setvar2($d);
+        $this->render("add");
+    }
+
+    function edit($maxe)
+    {
+        require(ROOT . 'Model/ProductAdmin.php');
+        $productsadmin= new ProductAdmin();
+        $d["ProductAdmin"] = $productsadmin->getById($maxe);  
+        $this->set($d);
+        
+        require_once(ROOT . 'Model/Category.php');
+        $categories = new Category();
+        $d1['categories'] = $categories->getAll();
+        $this->setvar2($d1);
+
+        if (isset($_POST["maxe"]))
+        {
+            
+            $productsadmin = new ProductAdmin();
+            if ($productsadmin->edit($_POST["maxe"], $_POST["tendongxe"],$_POST['gia'],$_POST['anh'],$_POST['maloaixe'],$_POST["mota"]))
+            {
+               header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
+            }
+        }      
+        $this->render("edit");
+    }
+
+    function delete($maxe)
+    {
+        require(ROOT . 'Model/ProductAdmin.php');
+
+        $productsadmin = new ProductAdmin();
+        if ($productsadmin->delete($maxe))
+        {
+           header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
+        }
+    }
+}
+?>

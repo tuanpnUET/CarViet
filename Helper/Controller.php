@@ -17,7 +17,7 @@
             $url = $_SERVER["REQUEST_URI"];
             $url = trim($url);
             $request = new stdClass();
-            if ($url == "/CarViet/" or $url == "carviet")
+            if ($url == "/CarViet/")
             {
                 $request->controller = "Home";
                 $request->action = "index";

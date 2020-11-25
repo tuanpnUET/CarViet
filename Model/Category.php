@@ -4,52 +4,40 @@ require_once (ROOT."/Helper/Database.php");
 class Category extends Database{
 	
 		public function getAll(){
-			$sql = "SELECT * FROM loaisanpham";
+			$sql = "SELECT * FROM loaixe";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetchAll();
 
 		}
-		public function getByID($maloai){
+		public function getByID($maloaixe){
 			
-			$sql = "SELECT * FROM loaisanpham where maloai='".$maloai."'";
+			$sql = "SELECT * FROM loaixe where maloaixe='".$maloaixe."'";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetch();
 
 		}
-		public function add($maloai,$tenloai)
+		public function add($maloaixe,$tenloaixe)
 		{
 			
-			$sql = "INSERT INTO loaisanpham(maloai,Tenloai) VALUES ('".$maloai."','".$tenloai."')";
+			$sql = "INSERT INTO loaixe(maloaixe,tenloaixe) VALUES ('".$maloaixe."','".$tenloaixe."')";
 			$request = $this->getConnection()->prepare($sql);
 			return $request->execute();
 		}
-		public function edit($maloai,$tenloai)
+		public function edit($maloaixe,$tenloaixe)
 		{
-			$sql="UPDATE loaisanpham SET Tenloai='".$tenloai."' where maloai='".$maloai."'";
+			$sql="UPDATE loaixe SET tenloaixe='".$tenloaixe."' where maloaixe='".$maloaixe."'";
 			$request= $this->getConnection()->prepare($sql);
 			return $request->execute();
 		}
 		public function delete($id){
-			$sql="DELETE FROM loaisanpham where maloai='".$id."'";
+			$sql="DELETE FROM loaixe where maloaixe='".$id."'";
 			$request=$this->getConnection()->prepare($sql);
 			return $request->execute();
 
 			
 
-		}
-		public function find(string $tentaikhoan){
-			$userList = array();
-			$sql = "SELECT id, tentaikhoan, matkhau, quyen, hoatdong FROM tblnguoidung where tentaikhoan='".$tentaikhoan."'";
-			$result = $this->conn->query($sql);
-			if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-						$objuser = new User($row['id'], $row['tentaikhoan'], $row['matkhau'], $row['quyen'],$row['hoatdong']);
-						array_push($userList, $objuser);
-					}
-			}
-			return $userList;
 		}
 		
 	}

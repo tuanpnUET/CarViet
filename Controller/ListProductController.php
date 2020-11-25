@@ -2,25 +2,25 @@
 require_once(ROOT.'Helper/Controller.php');
 class ListProductController extends Controller
 {
-    function index($maloai)
+    function index($maloaixe)
     {
         require(ROOT . 'Model/ListProduct.php');
         $listproducts = new ListProduct();
-        $this->data['listproducts'] = $listproducts->getAll($maloai);   
+        $this->data['listproducts'] = $listproducts->getAll($maloaixe);   
         $this->set($this->data);
         $this->render("index");
     }
   
     function add()
     {
-        if (isset($_POST["maloai"]))
+        if (isset($_POST["maloaixe"]))
         {
             
             require(ROOT . 'Model/ListProduct.php');
             $listproducts = new ListProduct();
           
 
-            if ($listproducts->add($_POST["maloai"], $_POST["tenloai"]))
+            if ($listproducts->add($_POST["maloaixe"], $_POST["tenloaixe"]))
             {
                 header("Location: " . WEBROOT."index.php/ListProduct/index/ALL/1" );
             }
@@ -34,11 +34,11 @@ class ListProductController extends Controller
         $this->render("add");
     }
 
-    function edit($maloai)
+    function edit($maloaixe)
     {
         require(ROOT . 'Model/ListProduct.php');
         $listproducts= new ListProduct();
-        $d["ListProduct"] = $listproducts->getById($maloai);  
+        $d["ListProduct"] = $listproducts->getById($maloaixe);  
         $this->set($d);
         
         require_once(ROOT . 'Model/Category.php');
@@ -46,11 +46,11 @@ class ListProductController extends Controller
         $d1['categories'] = $categories->getAll();
         $this->setvar2($d1);
 
-        if (isset($_POST["maloai"]))
+        if (isset($_POST["maloaixe"]))
         {
             
             $listproducts = new ListProduct();
-            if ($listproducts->edit($_POST["maloai"], $_POST["tenloai"],$_POST['anhloai']))
+            if ($listproducts->edit($_POST["maloaixe"], $_POST["tenloaixe"],$_POST['anhloai']))
             {
                header("Location: " . WEBROOT."index.php/ListProduct/index/ALL/1" );
             }
@@ -58,12 +58,12 @@ class ListProductController extends Controller
         $this->render("edit");
     }
 
-    function delete($maloai)
+    function delete($maloaixe)
     {
         require(ROOT . 'Model/ListProduct.php');
 
         $listproducts = new ListProduct();
-        if ($listproducts->delete($maloai))
+        if ($listproducts->delete($maloaixe))
         {
            header("Location: " . WEBROOT."index.php/ListProduct/index/ALL/1" );
         }

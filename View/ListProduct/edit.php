@@ -1,15 +1,15 @@
 
-<form name="frmthem" method="post" action="<?php WEBROOT . 'index.php/ListProduct/edit'.$ListProduct['maloai']; ?>" enctype="multipart/form-data">
+<form name="frmthem" method="post" action="<?php WEBROOT . 'index.php/ListProduct/edit'.$ListProduct['maloaixe']; ?>" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="maloai">Mã Loại Sản Phẩm</label>
-    <input type="text" class="form-control" name="maloai" value="<?php echo $ListProduct['maloai']; ?>"
+    <label for="maloaixe">Mã Loại Xe</label>
+    <input type="text" class="form-control" name="maloai" value="<?php echo $ListProduct['maloaixe']; ?>"
 >
   </div>
   <div class="form-group">
-    <label for="tenloai">Tên Loại Sản Phẩm </label>
-    <input type="text" class="form-control" name="tenloai" value="<?php echo $ListProduct['tenloai']; ?>"
+    <label for="tenloaixe">Tên Loại Xe</label>
+    <input type="text" class="form-control" name="tenloai" value="<?php echo $ListProduct['tenloaixe']; ?>"
 >
 
   </div>
-  <button type="submit" class="btn btn-default" style="background-color: green ">Sửa Sản Phẩm </button>
+  <button type="submit" class="btn btn-default" style="background-color: green ">Sửa </button>
 </form>

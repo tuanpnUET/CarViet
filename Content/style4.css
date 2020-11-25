@@ -1,0 +1,461 @@
+body{
+width: auto;	
+margin-left : 5%;
+margin-right : 5%;
+padding: 0px;
+font-family: Myriad Pro;
+line-height: unset;
+font-size: 18px;
+font-family: Myriad Pro;
+}
+ul li{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul li {
+	list-style: none;
+}
+
+/*  Phần Menu*/
+
+#header {
+	height: auto;
+	overflow: hidden;
+	background-image:url("background2.jpg");
+	margin:auto;
+	}
+#header #cart {
+	margin-top: 2%;
+}
+#header #dangxuat {
+	margin-top: 2%;
+}
+ #header #cart p{
+	background-color: #000000;
+	width: 70%;
+	font-size: 20px;
+	padding: 5px;
+}
+ #header #cart a {
+	color: white;
+	text-align: center;
+
+}
+#header #dangxuat p{
+	background-color: #000000;
+	width: 70%;
+	font-size: 20px;
+		padding: 5px;
+}
+#header #dangxuat a {
+	color: white;
+	text-align: center;}
+
+.center-block { 
+    margin-left:auto; 
+    margin-right:auto; 
+    display:block; 
+} 
+@media only screen and (max-width: 600px){
+	#header #logo img {
+	 margin-left:auto; 
+    margin-right:auto; 
+    display:block; 
+	}
+	#header #dangxuat p{
+	background-color: #000000;
+	width: 70%;
+	font-size: 15px;
+		padding: 5px;
+	}
+	#header #cart p{
+	background-color: #000000;
+	width: 70%;
+	font-size: 15px;
+	padding: 5px;
+	}
+}
+.navbar {
+	background-color: red;
+}
+.navbar-light .navbar-brand {
+	font-size: 20px;
+	color: white;	
+}
+.navbar-light .navbar-nav .nav-link {
+	font-size: 20px;
+	color: white;
+}
+.btn-outline-success {
+	color: white;
+}
+
+
+
+/*  Phần Main */
+#Main {
+	width: auto;
+	overflow: hidden;
+}
+.list-group-item {
+	padding: .25rem 1.5rem;
+	font-size: 15px;
+}
+
+#tintuc {
+	width: auto;
+}
+
+#tintuc #anhtintuc img{
+	width:100%;
+	float: left;
+}
+#tintuc #thongtintt {
+	float: left;
+}
+@media only screen and (max-width: 940px){
+	#right #tintuc h3 {
+		font-size: 13px;
+	}
+	#right #tintuc p {
+		font-size: 13px;
+	}
+}
+
+/*  Phần Footer */
+
+
+#Footer {
+	height: auto;
+	overflow: hidden;
+	background-color: #000000;	
+}
+
+.hotline{
+	font-family: "Myriad Pro";
+	border-radius: 10px;
+	border-width: 2px;
+  	border-color: rgb(255,0, 0);
+  	border-style: solid;
+  	background-color: rgb(0, 0, 0);
+  	width:auto;
+  	overflow: hidden;
+
+}
+
+.chu1{
+	font-size: 20px;
+  	color: rgb(255,0, 0);
+}
+#hotline1 ul li {
+	font-size: 20px;
+	color: rgb(255, 0, 0);
+}
+#hotline1 ul li p{
+	text-align: center;
+}
+
+#hotro ul li {
+	font-size: 20px;
+	color: white;
+}
+#hotro ul li a{
+	font-size: 18px;
+	color: white;
+	margin-left: 5px;
+}
+
+#lienhe ul li{
+	font-size: 20px;
+	color: white;
+}
+
+#lienhe ul  p{
+	font-size: 17px;
+	color: white;
+	margin-left:5px;
+}
+
+
+/*  Phần Sản Phẩm của trang Sản Phẩm */
+#sanpham ul li img{
+	width: 100%;
+	height: 150px;
+}
+#sanpham ul li {
+	float: left;
+	overflow: hidden;
+}
+#sanpham ul li h3 {
+	font-size: 14px;
+	text-align: center;
+}
+#sanpham ul li p{
+	font-size: 14px;
+	text-align: center;
+	color: red;
+} 
+#sanpham {
+	height: auto;
+	width: auto;
+	overflow: hidden;
+} 
+
+
+@media only screen and (max-width: 600px){
+	#sanpham ul li h3 {
+	font-size: 8px;
+	text-align: center;
+}
+#sanpham ul li p{
+	font-size: 12px;
+	text-align: center;
+	color: red;
+} 
+#khung1 {
+	display: none;
+}
+}
+#center {
+	width: auto;
+	height: auto;
+	z-index: 9999;
+	margin-top: 2%;
+}
+
+
+
+#center ul li img{
+	width: 100%;	
+}
+#center ul li {
+	float: left;
+}
+#center ul li p {
+	text-align: center;
+	padding-top: 5px;
+	font-size: 18px;
+	color: black;	
+}
+#center a{
+text-decoration: none;
+}
+#sanphammoi {
+	width: auto;
+	height: auto;
+	z-index: 9999;
+}
+
+
+#sanphammoi #tieude1 p{
+	font-size: 20px;
+}
+#sanphammoi #xemthem p{
+	font-size: 20px;	
+}
+#sanphammoi #sanphammoi3 img{
+width: 100%;
+height : 200px;
+}
+#sanphammoi #sanphammoi3 ul li {
+		overflow: hidden;
+
+	float: left;
+}
+#sanphammoi #sanphammoi3 ul li h3{
+	font-size: 15px;
+	text-align: center;
+}
+#sanphammoi #sanphammoi3 ul li p {
+	text-align :center;
+	color : red;
+	font-size : 15px; }
+
+
+	@media only screen and (max-width:600px){
+
+#sanphammoi #tieude1 p{
+	font-size: 15px;
+}
+#sanphammoi #xemthem p{
+	font-size: 15px;	
+}
+#sanphammoi #sanphammoi3 img{
+width: 80%;
+}
+
+#sanphammoi #sanphammoi3 ul li h3{
+	font-size: 13px;
+}
+#sanphammoi #sanphammoi3 ul li p {
+	text-align :center;
+	color : red;
+	font-size : 12px; }
+	}
+	@media only screen and (min-width:601px) and (max-width:880px){
+			#header #logo img{
+				margin-right: auto;
+				margin-left: auto;
+				display: block;	
+			}
+
+	}
+
+
+	@media only screen and (min-width:601px) and (max-width:880px){
+			#header #logo img{
+				margin-right: auto;
+				margin-left: auto;
+				display: block;	
+			}
+
+			#khung1 {
+				display: none;
+			}
+		
+	}
+	
+#Main #left1 img{
+	width: 100%;
+	height:100%;	
+	}
+#Main #right1 {
+margin-top: 2%;
+float: right;}
+#Main #right1 #tensanpham{
+	text-align: center;
+	font-size: 25px;
+	color: green;
+}
+
+#Main #right1 p {
+	padding: 2px;
+	font-size: 19px;
+}
+
+#Main #right1 #gia {
+	font-size: 25px;
+	color: red;
+}
+
+#Main #right1  #themvaogiohang {
+	background-color: green;
+	padding: 10px;
+	color: white;
+	margin-top: 5px;	
+
+}
+#Main #right1  #themvaogiohang a {
+	font-size: 20px;
+color: white;
+}
+
+#Main #right1 #themgiohang {
+	padding: 2px;
+	font-size: 19px;
+}
+
+#Main #left2 #tenchitiet{
+		color: red;
+}
+#Main #right2 img{ width: 100%;
+}
+#Main #right2 #sptt h3 {
+	text-align: center;
+	font-size: 15px;
+}
+#Main #right2  ul li {
+float: left;
+}
+
+@media only screen and  (max-width:740px){
+			#Main #right2 #sptt h3 {
+	text-align: center;
+	font-size: 10px;
+}
+#Main #right2 h2 {
+font-size: 15px;
+text-align: center;
+}
+}
+
+#httt  {
+	color: white;
+	background-color: green;
+	max-width: all;
+	line-height: 50px;
+}
+
+}
+.col-12 {
+	position: relative;
+    width: 100%;
+}
+.col-lg-12 {
+	position: relative;
+    width: 100%;
+}
+
+#chuyenkhoan {
+	margin: 2% auto;
+}
+
+#nutdathang {
+	padding: 20px;
+	background-color: green;
+	color: white;
+	font-size: 20px;
+}
+
+.xuong {
+	margin-top: 1%;
+}
+
+.dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu a::after{
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 3px;
+    top: 40%;
+}
+.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute !important;
+    margin-top: -30px;
+    left: 100%;
+}
+@media (max-width: 992px) {
+    .dropdown-menu{
+        width: 50%;
+    }
+    .dropdown-menu .dropdown-submenu{
+        width: auto;
+    }
+}
+#right #tintuc{
+	padding: 5% 5%;
+}
+#Main #Khungthongtin {
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-shadow:1px 1px #ccc;
+	background-color: #f8f8f8;
+	color: #5b5959;
+	font-size: 17px;
+}
+#Main #Khungchuanbi {
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-shadow:1px 1px #ccc;
+	background-color: #f8f8f8;
+}
+#Main #KhungSanPham {
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-shadow:1px 1px #ccc;
+	background-color: #f8f8f8;
+}

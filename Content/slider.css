@@ -7,8 +7,7 @@
 	position: relative; 
     margin:0px 0; 
  }								  
-   /* DEFAULT is for three panels in width, adjust as needed
-      This only matters if JS is OFF, otherwise JS sets this. */								  
+							  
 #mover { 
 	width: 2880px; 
 	position: relative; 

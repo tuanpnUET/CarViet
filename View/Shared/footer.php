@@ -2,17 +2,17 @@
 			<div id="hotro" class="col-12 col-lg-4 xuong">
 				<ul>
 					<li>Hỗ Trợ Khách Hàng</li>
-					<li><a href="login.html">Hướng dẫn đặt hàng</a></li>
-					<li><a href="">Chính sách bảo hành</a></li>
-					<li><a href="">Câu hỏi thường gặp</a></li>
-					<li><a href="">Hỏi đáp</a></li>		
+					<li><a href="#">Hướng dẫn đặt hàng</a></li>
+					<li><a href="#">Chính sách bảo hành</a></li>
+					<li><a href="#">Câu hỏi thường gặp</a></li>
+					<li><a href="#">Hỏi đáp</a></li>		
 				</ul>					
 			</div>
 			<div id="lienhe" class="col-12 col-lg-5 xuong">
 				<ul>
 					<li>Liên hệ</li>
-					<p>Địa Chỉ: Số 1 Hoàng Đạo Thúy,Hà Nội</p>
-					<p>Email: Tiemthuocminhtam@gmail.com</p>					
+					<p>Địa Chỉ: Số 34, phường Mai Dịch, quận Cầu Giấy, Hà Nội</p>
+					<p>Email: carviet@gmail.com</p>					
 				</ul>
 			</div>
 			<div id="hotline1" class="col-12 col-lg-3 xuong">

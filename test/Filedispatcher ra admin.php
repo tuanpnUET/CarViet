@@ -15,9 +15,9 @@ class Router
     {
         $url = trim($url);
 
-        if (strpos($url, 'CarViet/admin') !== false) {
+        if (strpos($url, 'BanThuoc_MVC/admin') !== false) {
             $request->isAdmin = true;
-            if ($url == "/CarViet/admin/")
+            if ($url == "/BanThuoc_MVC/admin/")
             {
                 $request->controller = "Home";
                 $request->action = "index";
@@ -41,7 +41,7 @@ class Router
         else
         {
 
-            if ($url == "/CarViet/" or $url == "Carviet")
+            if ($url == "/BanThuoc_MVC/")
             {
                 $request->controller = "Home";
                 $request->action = "index";
@@ -59,6 +59,8 @@ class Router
             }
 
         }
+        
+
     }
 
 }

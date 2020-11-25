@@ -8,6 +8,6 @@
     <label for="matkhau">Mật khẩu:</label>
     <input type="password" class="form-control" name="matkhau">
   </div>
-  <button type="submit" class="btn btn-default" style="background-color: green ">Đăng nhập</button>
+  <button type="submit" class="btn btn-default" style="background-color: black;color: white;">Đăng nhập</button>
 
 </form></center>

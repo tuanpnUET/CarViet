@@ -1,7 +1,6 @@
 <html>
 <head>
 	<title> </title>
-	
 		<meta name="viewport" content="width-device-width, initial-scale=1,shrink-to-fit=no">
 		<?php echo "<link rel='stylesheet' type='text/css' href='".WEBROOT."font-awesome/css/font-awesome.min.css'>";?>
 		<?php echo "<link rel='stylesheet' type='text/css' href='".WEBROOT."bootstrap-4.3.1-dist/css/bootstrap.min.css'>";?>
@@ -11,8 +10,8 @@
 </head>
 
 <body>
-<div class="container-fuild">
-			
+
+<div class="container-fuild">	
 
 		<?php  if($this->segments->controller == 'Home'){
 			$classLeft= "col-lg-3 col-12 ";

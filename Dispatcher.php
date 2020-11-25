@@ -16,7 +16,7 @@ class Router
         $url = trim($url);
         
 
-        if ($url == "/BanThuoc_MVC/")
+        if ($url == "/CarViet/")
         {
             $request->controller = "Home";
             $request->action = "index";

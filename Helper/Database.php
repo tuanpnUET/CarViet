@@ -14,7 +14,7 @@ class Database{
 	public  function getConnection() {
 		if($this->ocon==null) {
 			
-			$this->ocon=new PDO("mysql:host=localhost;dbname=qlbanthuoc", 'root', '');
+			$this->ocon=new PDO("mysql:host=localhost;dbname=carviet", 'root', '');
 			$this->ocon->exec("set names utf8");
         }
 			

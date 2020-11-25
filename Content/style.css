@@ -37,7 +37,7 @@ body {
 	background: #FFF;
 }
 .wrap {
-	width:80%;
+	width:100%;
 	margin: 0 auto;
 }
 .header {
@@ -399,7 +399,7 @@ body {
 /*** Footer ***/
 .footer {
 	position: relative;
-	background: #FCFCFC;
+	background: #000000;
     border-top: 1px solid #CECECE;
     margin:20px auto;
 }
@@ -1027,7 +1027,7 @@ body {
 	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 .span_1_of_3 .list li a:hover {
-	text-decoration:underline;
+	text-decoration:none;
 }
 /* Delivery  ============================================================================= */
 .section {
@@ -1827,6 +1827,7 @@ body {
 	}
 	.slides_container a {
 		width: 315px;
+		height: 200px
 	}
 	.signup input[type="text"] {
 		width: 63%;

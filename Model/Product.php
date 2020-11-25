@@ -7,30 +7,29 @@ class Product extends Database {
 		// {
 		// 	$ocon=$this->getConnection();
 		// }	
-		public function getAll($maloai){
+		public function getAll($maloaixe){
 			
-			$sql = "SELECT * FROM sanpham
+			$sql = "SELECT * FROM xe
 					ORDER BY ngaydang";
-			if($maloai!="ALL")
-				$sql="SELECT * FROM sanpham 	
-					where maloai='".$maloai."' 
+			if($maloaixe!="ALL")
+				$sql="SELECT * FROM xe 	
+					where maloaixe='".$maloaixe."' 
 					ORDER BY  ngaydang";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetchAll();
 		}
-		public function getById($masanpham){
+		public function getById($maxe){
 			
-			$sql = "SELECT * FROM sanpham where masanpham='".$masanpham."'";
-			
+			$sql = "SELECT * FROM xe where maxe='".$maxe."'";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetch();
 
 		}	
-		public function splq($maloai,$masanpham){
-			$sql="SELECT masanpham,tensanpham,anh,maloai FROM sanpham
-				Where (maloai='".$maloai."' and masanpham != '".$masanpham."')
+		public function splq($maxe, $maloaixe){
+			$sql="SELECT maxe,tendongxe,anh,maloaixe FROM xe
+				Where (maxe='".$maxe."' and maloaixe != '".$maloaixe."')
 				ORDER BY RAND()
 				LIMIT 3";
 		
@@ -40,7 +39,7 @@ class Product extends Database {
 			return $result->fetchAll();
 		}
 		public function find($value){ 
-			$sql = "SELECT * FROM sanpham Where  tensanpham LIKE '%".$value."%' OR loaisanpham LIKE '%".$value."%' ";
+			$sql = "SELECT * FROM xe Where  tendongxe LIKE '%".$value."%' OR gia LIKE '%".$value."%' ";
 			$result = $this->getConnection()->prepare($sql);
 			$result->execute();
 			return $result->fetchAll();

@@ -34,7 +34,7 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav mr-auto">
 		        <li class="nav-item">
-		          <a href="<?php echo WEBROOT."index.php/Product/index/ALL/1";?>" class=" nav-link" >Sản Phẩm<span class="sr-only">(current)</span></a>
+		          <a href="<?php echo WEBROOT."index.php/Product/index/ALL/1";?>" class=" nav-link" >Mẫu Xe<span class="sr-only">(current)</span></a>
 		        </li>
 		   
 		        <li class="nav-item">
@@ -78,7 +78,10 @@
 		    </form> ";
 		    }
 	 ?>
-
 		    </div>
 	  </nav>
+	</div>
+	<div>
+	<marquee style="background-color: black; color: white; font-size: 24px; padding-top:10px"><p><b>Chào mừng quý khách đến với CARVIET. Chúc quý khách có những trải nghiệm tuyệt vời cùng CARVIET chúng tôi!</b></p>
+	</marquee>
 	</div>

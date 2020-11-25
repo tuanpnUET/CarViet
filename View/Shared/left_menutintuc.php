@@ -1,7 +1,7 @@
 <?php require_once(ROOT . 'Model/CategoryTinTuc.php');?>
 <div >
 	<ul class="list-group">	
-		<li class="list-group-item" style="background:#209634; color: white">Danh Mục Tin Tức</li>
+		<li class="list-group-item" style="background:#000000; color: white">Danh Mục Tin Tức</li>
 		<?php 
 		$CategoryTin=new CategoryTinTuc();
 		$CategoriesTinTuc=$CategoryTin->getAll();
