@@ -1,15 +1,16 @@
-<h1>Danh Sách Sản Phẩm</h1>
+<h1>Danh Sách Xe</h1>
 <div >
     <table class="table table-bordered table-striped custab">
         <thead>
-            <a href="<?php echo WEBROOT.'index.php/ProductAdmin/add'?>" class="btn btn-primary btn-xs pull-right">Thêm Sản Phẩm</a>
+            <a href="<?php echo WEBROOT.'index.php/ProductAdmin/add'?>" class="btn btn-primary btn-xs pull-right">Thêm Xe mới</a>
         <tr>
-        	<th>ID</th>
-            <th>Mã Sản Phẩm</th>
-            <th>Mã Loại</th>
-            <th>Tên Sản Phẩm</th>
-            <th>Loại Sản Phẩm</th>
+            <th>STT</th>
+            <th>Mã Xe</th>
+            <th>Mã Loại Xe</th>
+            <th>Tên dòng xe</th>
+            <th>Giá</th>
             <th>Ảnh</th>
+            <th>Mô tả</th>
             <th class="text-center">Action</th>
         </tr>
         </thead>
@@ -17,7 +18,7 @@
         $tongsobanghi=count($productsadmin);
         $s_bghimoitrang=3;
         $start=0;
-                $maloai="ALL";
+                $mamaloaixe="ALL";
 
         $explode_url = explode('/', $_SERVER["REQUEST_URI"]);
         if(count($explode_url)>5)
@@ -27,15 +28,16 @@
         {
             echo '<tr>';    
             echo "<td>".$i."</td>";
-            echo "<td>" . $productsadmin[$j]['masanpham'] . "</td>";
-            echo "<td>" . $productsadmin[$j]['maloai'] . "</td>";
-            echo "<td>" . $productsadmin[$j]['tensanpham'] . "</td>";
-            echo "<td>" . $productsadmin[$j]['loaisanpham'] . "</td>";
+            echo "<td>" . $productsadmin[$j]['maxe'] . "</td>";
+            echo "<td>" . $productsadmin[$j]['maloaixe'] . "</td>";
+            echo "<td>" . $productsadmin[$j]['tendongxe'] . "</td>";
+            echo "<td>" . $productsadmin[$j]['gia'] . "</td>";
             echo "<td>" . $productsadmin[$j]['anh'] . "</td>";
+            echo "<td>" . $productsadmin[$j]['mota'] . "</td>";
 
             echo "<td class='text-center'>
-            <a class='btn btn-info btn-xs' href='".WEBROOT."index.php/ProductAdmin/edit/" . $productsadmin[$j]["masanpham"] . "' ><span class='glyphicon glyphicon-edit'></span> Edit</a>
-             <a href='".WEBROOT."index.php/ProductAdmin/delete/" . $productsadmin[$j]["masanpham"] . "' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span> Del</a></td>";
+            <a class='btn btn-info btn-xs' href='".WEBROOT."index.php/ProductAdmin/edit/" . $productsadmin[$j]["maxe"] . "' ><span class='glyphicon glyphicon-edit'></span> Edit</a>
+             <a href='".WEBROOT."index.php/ProductAdmin/delete/" . $productsadmin[$j]["maxe"] . "' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span> Del</a></td>";
             echo "</tr>";
             $i++;
         }
@@ -50,7 +52,7 @@
             {?>
                 <li style="float:left; list-style-type: none;"><a style="display:block; padding:10px; border:solid 1px orange; " href=
                 "<?php $str=WEBROOT."index.php/ProductAdmin/index/";
-                       $str.=$maloai."/";
+                       $str.=$mamaloaixe."/";
                        $str.=$i;
                 echo $str; ?>"><?php echo $i;?></a></li>
             <?php

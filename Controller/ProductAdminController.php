@@ -1,19 +1,19 @@
 #<?php
 require_once(ROOT.'Helper/Controller.php');
-class ProductAdminController extends Controller
-{
-    function index($maloai)
+Class ProductAdminController extends Controller{
+    function index()
     {
         require(ROOT . 'Model/ProductAdmin.php');
         $productsadmin = new ProductAdmin();
-        $this->data['productsadmin'] = $productsadmin->getAll($maloai);   
+
+        $this->data['productsadmin'] = $productsadmin->getAll();
         $this->set($this->data);
         $this->render("index");
     }
   
     function add()
     {
-        if (isset($_POST["masanpham"]))
+        if (isset($_POST["maxe"]))
         {
             if(isset($_FILES['anh'])){
             $file_name = $_FILES['anh']['name'];
@@ -24,7 +24,7 @@ class ProductAdminController extends Controller
             $productsadmin = new ProductAdmin();
           
 
-            if ($productsadmin->add($_POST["masanpham"],$_POST["maloai"], $_POST["tensanpham"],$_POST["gia"],$file_name,$_POST['loaisanpham'],$_POST["dangbaoche"],$_POST["quycachsanpham"],$_POST["hamluong"],$_POST["thanhphan"],$_POST["congdung"],$_POST["doituong"],$_POST["cachdung"],$_POST["luuy"],$_POST["baoquan"],$_POST["hansudung"]))
+            if ($productsadmin->add($_POST["maxe"],$_POST["maloaixe"], $_POST["tendongxe"],$_POST["gia"],$_POST['mota']))
             {
                 header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
             }
@@ -41,11 +41,11 @@ class ProductAdminController extends Controller
         $this->render("add");
     }
 
-    function edit($masanpham)
+    function edit($maxe)
     {
         require(ROOT . 'Model/ProductAdmin.php');
         $productsadmin= new ProductAdmin();
-        $d["ProductAdmin"] = $productsadmin->getById($masanpham);  
+        $d["ProductAdmin"] = $productsadmin->getById($maxe);  
         $this->set($d);
         
         require_once(ROOT . 'Model/Category.php');
@@ -53,11 +53,11 @@ class ProductAdminController extends Controller
         $d1['categories'] = $categories->getAll();
         $this->setvar2($d1);
 
-        if (isset($_POST["masanpham"]))
+        if (isset($_POST["maxe"]))
         {
             
             $productsadmin = new ProductAdmin();
-            if ($productsadmin->edit($_POST["masanpham"], $_POST["tensanpham"],$_POST['gia'],$_POST['anh'],$_POST['loaisanpham'],$_POST["dangbaoche"],$_POST["quycachsanpham"],$_POST["hamluong"],$_POST["thanhphan"],$_POST["congdung"],$_POST["doituong"],$_POST["cachdung"],$_POST["luuy"],$_POST["baoquan"],$_POST["hansudung"]))
+            if ($productsadmin->edit($_POST["maxe"], $_POST["tendongxe"],$_POST['gia'],$_POST['anh'],$_POST['maloaixe']))
             {
                header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
             }
@@ -65,12 +65,11 @@ class ProductAdminController extends Controller
         $this->render("edit");
     }
 
-    function delete($masanpham)
+    function delete($maxe)
     {
         require(ROOT . 'Model/ProductAdmin.php');
-
         $productsadmin = new ProductAdmin();
-        if ($productsadmin->delete($masanpham))
+        if ($productsadmin->delete($maxe))
         {
            header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
         }

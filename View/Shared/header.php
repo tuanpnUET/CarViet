@@ -52,12 +52,12 @@
 				        Quản Trị
 				     </a>
 				   <div class="dropdown-menu">
-				       <a class="dropdown-item"  href="<?php echo WEBROOT."index.php/ProductAdmin/index/ALL/1" ?>">Sản Phẩm</a>
+				       <a class="dropdown-item"  href="<?php echo WEBROOT."index.php/ProductAdmin/index/ALL/1" ?>">Xe</a>
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/User/index/ALL/1";?>">Tài Khoản</a>
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/NewsAdmin/index/ALL/1";?>">Tin Tức</a>
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ContactAdmin/index/ALL/1";?>">Hỏi Đáp</a>
-				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ListProduct/index/ALL/1";?>">Danh Mục Sản Phẩm</a>
-				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ListNew/index/ALL/1";?>">Danh Mục Tin Tức</a>
+				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ListProduct/index/ALL/1";?>">Loại Xe</a>
+				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/ListNew/index/ALL/1";?>">Loại Tin Tức</a>
 				       <a class="dropdown-item" href="<?php echo WEBROOT."index.php/CartAdmin/index/ALL/1"?>">Đơn hàng</a>
 
 				    </div>

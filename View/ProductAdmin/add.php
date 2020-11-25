@@ -1,15 +1,15 @@
 <form name="frmthem" method="post" action="<?php WEBROOT . 'index.php/ProductAdmin/add'?>" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="maloai">Mã Sản Phẩm:</label>
-    <input type="text" class="form-control" name="masanpham">
+    <label for="maxe">Mã Xe:</label>
+    <input type="text" class="form-control" name="maxe">
   </div>
   <div class="form-group">
-    <label for="maloai">Mã lọai:</label>
+    <label for="maloaixe">Mã loai xe:</label>
     <select name="maloai">
          <?php
       foreach($categories as $category)
       {
-        echo "<option value='".$category['maloai']."'>".$category['tenloai']."</option>";
+        echo "<option value='".$category['maloaixe']."'>".$category['tenloaixe']."</option>";
       }
       ?>
     </select>

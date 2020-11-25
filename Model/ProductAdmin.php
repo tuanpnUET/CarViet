@@ -1,15 +1,28 @@
 <?php
-require_once(ROOT.'Helper/Controller.php');
+require_once(ROOT.'Helper/Database.php');
 class ProductAdmin extends Database {
-    function index($maloaixe)
-    {
-        require(ROOT . 'Model/ProductAdmin.php');
-        $productsadmin = new ProductAdmin();
-        $this->data['productsadmin'] = $productsadmin->getAll($maloaixe);   
-        $this->set($this->data);
-        $this->render("index");
-    }
-  
+    private static $ocon=null;
+        public function __construct()
+        {
+            
+            $ocon=$this->getConnection();
+
+        }
+    public function getAll(){
+            
+            $sql = "SELECT * FROM xe";
+            $result = $this->getConnection()->prepare($sql);
+            $result->execute();
+            return $result->fetchAll();
+        }
+    public function getById($maxe){
+            
+            $sql = "SELECT * FROM xe where maxe='".$maxe."'";
+            $result = $this->getConnection()->prepare($sql);
+            $result->execute();
+            return $result->fetch();
+
+        }   
     function add()
     {
         if (isset($_POST["maxe"]))
@@ -54,8 +67,6 @@ class ProductAdmin extends Database {
 
         if (isset($_POST["maxe"]))
         {
-            
-            $productsadmin = new ProductAdmin();
             if ($productsadmin->edit($_POST["maxe"], $_POST["tendongxe"],$_POST['gia'],$_POST['anh'],$_POST['maloaixe'],$_POST["mota"]))
             {
                header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
