@@ -43,8 +43,8 @@
 		        <li class="nav-item">
 		          <a class="nav-link" href="<?php echo WEBROOT."index.php/Contact/index" ?>">Liên Hệ</a>
 		        </li>
-		         <li class="nav-item">
-		          <a class="nav-link" href="<?php echo WEBROOT."index.php/Oder/index/ALL/1" ?>">Đơn Mua</a>
+		        <li class="nav-item">
+		          <a class="nav-link" href="<?php echo WEBROOT."index.php/Showroom/index" ?>">Showroom</a>
 		        </li>
 		        <?php if(isset($_SESSION["user"]) &&($_SESSION["quyen"]=="2")){?>
 		         <li class="nav-item dropdown" style="z-index:1;">

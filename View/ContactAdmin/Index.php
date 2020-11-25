@@ -3,10 +3,11 @@
     <table class="table table-bordered table-striped custab">
         <thead>
         <tr>
-            <th>STT</th>
+            <th>id</th>
             <th>Họ Tên</th>
             <th>Số Điện Thoại</th>
             <th>Email</th>
+            <th>Địa Chỉ</th>
             <th>Nội Dung</th>
         </tr>
         </thead>
@@ -20,11 +21,12 @@
         $i=1;
         for($j=$start;($j<$s_bghimoitrang+$start) && ($j<$tongsobanghi);$j++)
         {
-            echo '<tr>';    
-            echo "<td>" . $ContactAdmins[$j]['ID'] . "</td>";
+            echo '<tr>';   
+            echo "<td>" . $ContactAdmins[$j]['id'] . "</td>";
             echo "<td>" . $ContactAdmins[$j]['hoten'] . "</td>";
             echo "<td>" . $ContactAdmins[$j]['sdt'] . "</td>";
             echo "<td>" . $ContactAdmins[$j]['email'] . "</td>";
+            echo "<td>" . $ContactAdmins[$j]['diachi'] . "</td>";
             echo "<td>" . $ContactAdmins[$j]['noidung'] . "</td>";
             echo "</tr>";
             $i++;

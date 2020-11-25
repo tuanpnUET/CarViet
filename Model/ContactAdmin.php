@@ -12,8 +12,5 @@ class ContactAdmin extends Database{
 		}
 
 		
-	}
-	/*$t=new User();
-	$row=$t->edit();*/
-	
+	}	
   ?>

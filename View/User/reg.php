@@ -1,11 +1,11 @@
 <h2><center>Đăng Ký</center></h2>
 <center><form name="frmthem" method="post" action="<?php WEBROOT . 'index.php/User/reg' ?>" enctype="multipart/form-data" style ="width: 30%">
   <div class="form-group">
-    <label for="maloai">Tên tài khoản:</label>
+    <label for="">Tên tài khoản:</label>
     <input type="text" class="form-control" name="taikhoan">
   </div>
   <div class="form-group">
-    <label for="tenloai">Mật khẩu:</label>
+    <label for="">Mật khẩu:</label>
     <input type="password" class="form-control" name="matkhau">
   </div>
    

@@ -1,4 +1,4 @@
-<center><h3 style="margin-top: 2%">Gửi Câu Hỏi Của Bạn</h3></center>
+<center><h3 style="margin-top: 2%">Hãy Gửi Câu Hỏi Của Bạn Cho Chúng Tôi</h3></center>
 		<div class="container ">
 			<form class="form-horizontal col-lg-10 col-12 " style="padding: 15px;margin: auto;" method="POST" action="<?php WEBROOT.'index.php/Contact/index' ?>">
 				<div class="row">
@@ -20,14 +20,14 @@
 				  </div>
 				   <div class="form-group">
 				    <div class="col-lg-12 col-12"> 
-				       <input placeholder="Địa Chỉ" class="form-control" id="diachi"><div id="z-diachi" onkeyup="hoidap()"></div>
+				       <input placeholder="Địa Chỉ" class="form-control" id="diachi"><div id="diachi" onkeyup="hoidap()"></div>
 				    </div>
 				  </div>
 				  </div>
 				  <div class="col-lg-6 col-6">
 				   <div class="form-group" >
 				    <div class="col-lg-12 col-12"> 
-				  <textarea type="diachi" class="form-control" id="cauhoi" placeholder="Câu hỏi của bạn" name="diachi" style="height: 200px" onkeyup="hoidap()"></textarea><div id="z-cauhoi"></div>
+				  <textarea type="noidung" class="form-control" id="noidung" placeholder="Ý kiến của bạn" name="noidung" style="height: 200px" onkeyup="hoidap()"></textarea><div id="noidung"></div>
 				    </div>
 				    </div>
 				  </div>		  

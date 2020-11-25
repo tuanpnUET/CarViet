@@ -52,12 +52,6 @@ class UserController extends Controller
             }
 
         }
-
-
-
-        // echo '<pre>'.__FILE__.'::'.__METHOD__.'('.__LINE__.')';
-        //     print_r($this);
-        // echo '</pre>';
         $this->render("login");
     }
 

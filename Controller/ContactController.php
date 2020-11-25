@@ -12,7 +12,7 @@ Class ContactController extends Controller {
             if ($contacts->index($_POST['hoten'],$_POST['sdt'],$_POST['email'],$_POST['noidung'],$_POST['diachi']))
             {
                 
-                 header("Location: " . WEBROOT . "index.php/Contact/index");
+                 header("Location: " . WEBROOT . "index.php/Home/index");
                
             }
         }
