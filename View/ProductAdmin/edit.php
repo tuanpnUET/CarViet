@@ -2,7 +2,7 @@
 <form name="frmthem" method="post" action="<?php WEBROOT . 'index.php/ProductAdmin/edit'.$ProductAdmin['maxe']; ?>" enctype="multipart/form-data">
   <div class="form-group">
     <label for="maxe">Mã Xe</label>
-    <input type="text" class="form-control" name="maxe" value="<?php echo $ProductAdmin['maxe']; ?>">
+    <input type="text" alt="disabled" class="form-control" name="maxe" value="<?php echo $ProductAdmin['maxe']; ?>">
   </div>
   <div class="form-group">
     <label for="maloaixe">Mã Loại xe</label>

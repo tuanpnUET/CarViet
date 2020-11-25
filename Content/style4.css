@@ -33,9 +33,11 @@ ul li {
 }
  #header #cart p{
 	background-color: #000000;
-	width: 70%;
-	font-size: 20px;
-	padding: 5px;
+    width: 70%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: solid;
 }
  #header #cart a {
 	color: white;
@@ -44,9 +46,11 @@ ul li {
 }
 #header #dangxuat p{
 	background-color: #000000;
-	width: 70%;
-	font-size: 20px;
-		padding: 5px;
+    width: 70%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: solid;
 }
 #header #dangxuat a {
 	color: white;

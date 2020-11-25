@@ -82,6 +82,16 @@
 	  </nav>
 	</div>
 	<div>
-	<marquee style="background-color: black; color: white; font-size: 24px; padding-top:10px"><p><b>Chào mừng quý khách đến với CARVIET. Chúc quý khách có những trải nghiệm tuyệt vời cùng CARVIET chúng tôi!</b></p>
+	<marquee style="background-color: black; color: white; font-size: 24px; padding-top:10px">
+		<p><b>
+				Chào mừng 
+				<?php
+				if(isset($_SESSION["user"]) == 1 or isset($_SESSION["user"]) == 2 ) {
+					echo "<span style='color: red;'>".$_SESSION["user"]."</span>";} 
+				else{
+					echo "Quý khách"; 
+					}?>
+					đến với CARVIET. Chúc quý khách có những trải nghiệm tuyệt vời cùng CARVIET chúng tôi!
+			</b></p>
 	</marquee>
 	</div>

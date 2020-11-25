@@ -4,8 +4,8 @@
     <input type="text" class="form-control" name="maxe">
   </div>
   <div class="form-group">
-    <label for="maloaixe">Mã loai xe:</label>
-    <select name="maloai">
+    <label for="maloaixe">Mã loại xe:</label>
+    <select name="maloaixe">
          <?php
       foreach($categories as $category)
       {
@@ -15,60 +15,20 @@
     </select>
   </div>
    <div class="form-group">
-    <label for="tenloai">Tên Sản Phẩm:</label>
-    <input type="text" class="form-control" name="tensanpham">
+    <label for="tendongxe">Tên Dòng Xe:</label>
+    <input type="text" class="form-control" name="tendongxe">
   </div>
   <div class="form-group">
-    <label for="maloai">Giá:</label>
+    <label for="gia">Giá:</label>
     <input type="text" class="form-control" name="gia">
   </div>
   <div class="form-group">
-    <label for="anh">:Ảnh</label>
+    <label for="anh">Ảnh:</label>
     <input type="file" class="form-control" name="anh">
   </div>
   <div class="form-group">
-    <label for="maloai">:Loại Sản Phẩm</label>
-    <input type="text" class="form-control" name="loaisanpham">
+    <label for="mota">Mô tả:</label>
+    <input type="text" class="form-control" name="mota">
   </div>
-  <div class="form-group">
-    <label for="maloai">:Dạng Bào Chế</label>
-    <input type="text" class="form-control" name="dangbaoche">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Quy Cách Sản Phẩm</label>
-    <input type="text" class="form-control" name="quycachsanpham">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Hàm Lượng</label>
-    <input type="text" class="form-control" name="hamluong">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Thành Phần</label>
-    <input type="text" class="form-control" name="thanhphan">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Công Dụng</label>
-    <input type="text" class="form-control" name="congdung">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Dối Tượng</label>
-    <input type="text" class="form-control" name="doituong">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Cách Dùng</label>
-    <input type="text" class="form-control" name="cachdung">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Lưu ý</label>
-    <input type="text" class="form-control" name="luuy">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Bảo Quản</label>
-    <input type="text" class="form-control" name="baoquan">
-  </div>
-  <div class="form-group">
-    <label for="maloai">:Hạn Sử Dụng</label>
-    <input type="text" class="form-control" name="hansudung">
-  </div>
-  <button type="submit" class="btn btn-default" style="background-color: green ">Thêm Sản Phẩm</button>
+  <button type="submit" class="btn btn-default" style="background-color: black; color: white; ">Thêm Xe Mới</button>
 </form>

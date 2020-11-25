@@ -16,8 +16,8 @@
     <input type="text" class="form-control" name="noidungtin" value="<?php echo $NewsAdmin['noidungtin']; ?>">
   </div>
   <div class="form-group">
-    <label for="anh">:Ảnh</label>
+    <label for="anh">Ảnh:</label>
     <input type="text" class="form-control" name="anh" value="<?php echo $NewsAdmin['anh']; ?>">
   </div>
-  <button type="submit" class="btn btn-default" style="background-color: green ">Sửa Thông Tin</button>
+  <button type="submit" class="btn btn-default" style="background-color: black; color: white; ">Sửa </button>
 </form>

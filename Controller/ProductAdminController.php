@@ -1,11 +1,10 @@
-#<?php
+<?php
 require_once(ROOT.'Helper/Controller.php');
 Class ProductAdminController extends Controller{
     function index()
     {
         require(ROOT . 'Model/ProductAdmin.php');
         $productsadmin = new ProductAdmin();
-
         $this->data['productsadmin'] = $productsadmin->getAll();
         $this->set($this->data);
         $this->render("index");
@@ -24,14 +23,9 @@ Class ProductAdminController extends Controller{
             $productsadmin = new ProductAdmin();
           
 
-            if ($productsadmin->add($_POST["maxe"],$_POST["maloaixe"], $_POST["tendongxe"],$_POST["gia"],$_POST['mota']))
+            if ($productsadmin->add($_POST["maxe"],$_POST["maloaixe"], $_POST["tendongxe"],$_POST["gia"],$_POST['anh'],$_POST['mota']))
             {
                 header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
-            }
-            else
-            {
-
-                header("Location:".WEBROOT."loi.php");
             }
         }
         require_once(ROOT . 'Model/Category.php');
@@ -57,7 +51,7 @@ Class ProductAdminController extends Controller{
         {
             
             $productsadmin = new ProductAdmin();
-            if ($productsadmin->edit($_POST["maxe"], $_POST["tendongxe"],$_POST['gia'],$_POST['anh'],$_POST['maloaixe']))
+            if ($productsadmin->edit($_POST["maxe"],$_POST['maloaixe'], $_POST["tendongxe"],$_POST['gia'],$_POST['anh'],$_POST['mota']))
             {
                header("Location: " . WEBROOT."index.php/ProductAdmin/index/ALL/1" );
             }

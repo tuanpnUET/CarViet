@@ -41,9 +41,8 @@
 		  		  	<?php      if(!isset($_SESSION["user"])) { ?>
 				  	
 				  		<center><a  href="<?php echo WEBROOT.'index.php/Cart/index/';?>"><p class='center-block' style='background-color: black;color: white;padding:5px 5px'><i class='fa fa-shopping-cart'></i>GIỎ HÀNG</p></a></center>
-				  	 <?php }    else{    ?>
-				  	 	<?php echo "Hello:".$_SESSION["user"].""; ?>
-					<center ><a href="<?php echo WEBROOT.'index.php/User/doimatkhau/';?>"><input type="button" name="dmk" class="button" style="margin-top: 15px;" value="Đổi mật khẩu"></a></center>
+				  	 <?php }    else{ ?>
+					<center ><a href="<?php echo WEBROOT.'index.php/User/doimatkhau/';?>"><input type="button" name="dmk" class="btn btn-default" style="margin-top: 15px; background-color: black; color: red;border-color: red;" value="Đổi mật khẩu"></a></center>
 				  	 	 <?php }?>
 				  	<center><p style="margin-top:15px;" class="hotline"><span></span><b class="chu1">Tư vấn miễn phí</b><br><b class="chu1">0928230347</b></p></center>
 				  	<center><p class="hotline"><span><img src=""></span><b class="chu1">Tư vấn miễn phí</b><br><b class="chu1">0928230347</b></p></center>
