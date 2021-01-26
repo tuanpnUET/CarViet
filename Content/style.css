@@ -323,6 +323,10 @@ body {
 .see p a:hover{
 	color: #E4292F;
 }
+.resizeImage{
+	height: 200px;
+	width: 300px;
+}
 /**** Grid 1_0f_4 ****/
 .grid_1_of_4 {
 	display: block;

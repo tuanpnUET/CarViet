@@ -40,7 +40,7 @@
 		  		  <div class="col-lg-3 col-12 " id="khung1" >
 		  		  	<?php      if(!isset($_SESSION["user"])) { ?>
 				  	
-				  		<center><a  href="<?php echo WEBROOT.'index.php/Cart/index/';?>"><p class='center-block' style='background-color: black;color: white;padding:5px 5px'><i class='fa fa-shopping-cart'></i>GIỎ HÀNG</p></a></center>
+				  		<center><a  href="<?php echo WEBROOT.'index.php/Cart/index/';?>"><p class='center-block' style='background-color: black;color: white;border-color: red;padding:5px 5px'><i class='fa fa-shopping-cart'></i>LỊCH HẸN</p></a></center>
 				  	 <?php }    else{ ?>
 					<center ><a href="<?php echo WEBROOT.'index.php/User/doimatkhau/';?>"><input type="button" name="dmk" class="btn btn-default" style="margin-top: 15px; background-color: black; color: red;border-color: red;" value="Đổi mật khẩu"></a></center>
 				  	 	 <?php }?>

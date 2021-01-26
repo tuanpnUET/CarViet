@@ -19,7 +19,7 @@
             if($i%4==1) echo "<div class='row'>";
         
             echo "<li class='col-lg-3 col-6'>";
-            echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['maxe']."/".$products[$j]['maloaixe']."'><img src='".WEBROOT."image/".$products[$j]['anh']."' ></a>";
+            echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['maxe']."/".$products[$j]['maloaixe']."'><img  class='resizeImage' src='".WEBROOT."image/".$products[$j]['anh']."' ></a>";
             
             echo "<a href='".WEBROOT."index.php/product/detail/".$products[$j]['maxe']."/".$products[$j]['maloaixe']."'><h3>".$products[$j]['tendongxe']."</h3></a>";
             echo "<p>Giá: ".$products[$j]['gia']."VND</p>";
@@ -36,7 +36,7 @@
             $i=1;
             while($i<=ceil($tongsobanghi/$s_bghimoitrang))
             {?>
-                <li style="float:left; list-style-type: none;"><a style="display:block; padding:10px; border:solid 1px orange; " href=
+                <li style="float:left; list-style-type: none;"><a style="display:block; padding:10px; border:solid 1px red; background-color: black; " href=
                 "<?php $str=WEBROOT."index.php/Product/index/";
                        $str.=$maloaixe."/";
                        $str.=$i;

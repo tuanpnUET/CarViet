@@ -1,6 +1,6 @@
 <div class="row" id="Main" style="margin-top: 3%">
 	<div id="left1" class="col-lg-5 col-12">
-		<?php echo "<img src='".WEBROOT."image/".$products['anh']."' class='border' >" ?>
+		<?php echo "<img class='resizeImage' src='".WEBROOT."image/".$products['anh']."' class='border' >" ?>
 	</div>
 
 	<div id="right1" class="col-lg-7 col-12">

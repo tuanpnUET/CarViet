@@ -16,7 +16,10 @@ ul li{
 ul li {
 	list-style: none;
 }
-
+.resizeImage{
+	height: 200px;
+	width: 300px;
+}
 /*  Phần Menu*/
 
 #header {

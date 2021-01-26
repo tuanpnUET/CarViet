@@ -42,7 +42,7 @@
             $i=1;
             while($i<=ceil($tongsobanghi/$s_bghimoitrang))
             {?>
-                <li style="float:left; list-style-type: none;"><a style="display:block; padding:10px; border:solid 1px orange; " href=
+                <li style="float:left; list-style-type: none;"><a style="display:block; padding:10px; border:solid 2px red; background-color: black;" href=
                 "<?php $str=WEBROOT."index.php/ListProduct/index/";
                        $str.=$maloaixe."/";
                        $str.=$i;
